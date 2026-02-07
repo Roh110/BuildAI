@@ -1,0 +1,66 @@
+<!-- schedule.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Schedule - BuildAI Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">🏗️</span>
+                <span class="logo-text">BuildAI Pro</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="result.html">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="schedule-section">
+        <div class="container">
+            <div class="schedule-header">
+                <div>
+                    <h1 class="schedule-title">Construction Schedule</h1>
+                    <p class="schedule-subtitle">Week-by-week breakdown of your project timeline</p>
+                </div>
+                <button class="back-button" onclick="window.location.href='result.html'">← Back to Dashboard</button>
+            </div>
+
+            <div class="schedule-overview">
+                <div class="overview-card">
+                    <div class="overview-label">Total Duration</div>
+                    <div class="overview-value" id="scheduleWeeks">-</div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-label">Major Phases</div>
+                    <div class="overview-value">3</div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-label">Total Tasks</div>
+                    <div class="overview-value" id="totalTasks">-</div>
+                </div>
+            </div>
+
+            <div class="schedule-timeline" id="scheduleTimeline">
+                <!-- Timeline will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 BuildAI Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        loadScheduleData();
+    </script>
+</body>
+</html>
