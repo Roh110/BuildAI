@@ -1,13 +1,16 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>BuildAI Pro – PlanForge Engine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuildAI Pro - Smart Construction Planning</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
@@ -15,119 +18,113 @@
                 <span class="logo-text">BuildAI Pro</span>
             </div>
             <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
                 <a href="#calculator">Calculator</a>
-                <a href="#" class="nav-cta">Get Started</a>
+                <a href="#results">Results</a>
             </div>
         </div>
     </nav>
 
+    <!-- HERO -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Smart Construction Planning<br>Made Simple</h1>
-                <p class="hero-subtitle">AI-powered project estimation, workforce planning, and blueprint generation for modern construction projects</p>
-                <button class="cta-button" onclick="scrollToCalculator()">Start Planning Now</button>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-card">
-                    <div class="stat-number">10K+</div>
-                    <div class="stat-label">Projects Planned</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">Accuracy Rate</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">30%</div>
-                    <div class="stat-label">Cost Savings</div>
-                </div>
-            </div>
+        <div class="container hero-content">
+            <h1 class="hero-title">AI Construction Planning</h1>
+            <p class="hero-subtitle">
+                Smart workforce, material, cost & timeline estimation using AI
+            </p>
+            <button class="cta-button" onclick="scrollToCalculator()">
+                Start Planning
+            </button>
         </div>
     </section>
 
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">How BuildAI Pro Works</h2>
-            <div class="steps-container">
-                <div class="step-card">
-                    <div class="step-icon">📝</div>
-                    <div class="step-number">Step 1</div>
-                    <h3 class="step-title">Enter Project Details</h3>
-                    <p class="step-description">Provide basic information about your construction project including area, floors, and budget</p>
-                </div>
-                <div class="step-connector">→</div>
-                <div class="step-card">
-                    <div class="step-icon">🤖</div>
-                    <div class="step-number">Step 2</div>
-                    <h3 class="step-title">AI Analysis</h3>
-                    <p class="step-description">Our AI engine analyzes your requirements and calculates optimal resource allocation</p>
-                </div>
-                <div class="step-connector">→</div>
-                <div class="step-card">
-                    <div class="step-icon">📊</div>
-                    <div class="step-number">Step 3</div>
-                    <h3 class="step-title">Review Dashboard</h3>
-                    <p class="step-description">Get detailed insights on workers, costs, materials, and project timeline</p>
-                </div>
-                <div class="step-connector">→</div>
-                <div class="step-card">
-                    <div class="step-icon">🏗️</div>
-                    <div class="step-number">Step 4</div>
-                    <h3 class="step-title">Execute & Monitor</h3>
-                    <p class="step-description">Use generated schedules and blueprints to execute your project efficiently</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- CALCULATOR -->
     <section id="calculator" class="calculator-section">
         <div class="container">
             <h2 class="section-title">Project Calculator</h2>
+
             <div class="calculator-card">
                 <form id="projectForm" class="calculator-form">
+
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="builtUpArea">Built-up Area (sq.ft)</label>
-                            <input type="number" id="builtUpArea" name="builtUpArea" required min="100" step="10" placeholder="e.g., 2000">
+                            <label>Built-up Area (sq.ft)</label>
+                            <input type="number" id="builtUpArea" required placeholder="1200">
                         </div>
+
                         <div class="form-group">
-                            <label for="floors">Number of Floors</label>
-                            <select id="floors" name="floors" required>
-                                <option value="">Select floors</option>
-                                <option value="G">Ground Floor (G)</option>
-                                <option value="G+1">Ground + 1 Floor (G+1)</option>
-                                <option value="G+2">Ground + 2 Floors (G+2)</option>
-                                <option value="G+3">Ground + 3 Floors (G+3)</option>
-                                <option value="G+4">Ground + 4 Floors (G+4)</option>
+                            <label>Floors</label>
+                            <select id="floors" required>
+                                <option value="">Select</option>
+                                <option value="G">G</option>
+                                <option value="G+1">G+1</option>
+                                <option value="G+2">G+2</option>
+                                <option value="G+3">G+3</option>
                             </select>
                         </div>
                     </div>
+
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="budget">Estimated Budget (₹)</label>
-                            <input type="number" id="budget" name="budget" required min="100000" step="10000" placeholder="e.g., 5000000">
-                        </div>
-                        <div class="form-group">
-                            <label for="days">Target Completion (days)</label>
-                            <input type="number" id="days" name="days" required min="30" step="1" placeholder="e.g., 180">
+                            <label>Duration (days)</label>
+                            <input type="number" id="days" required placeholder="180">
                         </div>
                     </div>
+
                     <div class="form-actions">
-                        <button type="submit" class="submit-button">Calculate Project</button>
+                        <button type="submit" class="submit-button">
+                            Calculate Project
+                        </button>
                     </div>
+
                 </form>
             </div>
         </div>
     </section>
 
+    <!-- RESULTS -->
+    <section id="results" class="dashboard-section" style="display:none;">
+        <div class="container">
+            <h2 class="section-title">Project Results</h2>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>👷 Workforce</h3>
+                    <p>Total Workers: <b><span id="workersTotal"></span></b></p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>🧱 Materials</h3>
+                    <p>Cement Bags: <b><span id="cement"></span></b></p>
+                    <p>Steel (tons): <b><span id="steel"></span></b></p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>💰 Cost</h3>
+                    <p>Total Cost: ₹<b><span id="totalCost"></span></b></p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>⏳ Timeline</h3>
+                    <p>Finishing Phase: <b><span id="timeline"></span></b></p>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>🤖 AI Insights</h3>
+                <p id="aiInsights"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 BuildAI Pro. All rights reserved. | SmartBridge Competition Entry</p>
+            <p>BuildAI Pro | PlanForge AI Engine | Offline AI Web Application</p>
         </div>
     </footer>
 
+    <!-- Script -->
     <script src="script.js"></script>
+
 </body>
 </html>
