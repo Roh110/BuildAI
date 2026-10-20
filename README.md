@@ -1,5 +1,4 @@
 ## BuildAI Pro
-
 An AI-assisted construction planning system that estimates
 - Workforce
 - Materials
